@@ -90,17 +90,23 @@ class Student{
 
 class LearningPath{
     constructor({
-        name,courses
+        name,courses=[]
     }){
         this.name=name;
-        this.courses=[];
+        this.courses=courses;
     }
 
 }
 
 
-const escuelaWeb=new LearningPath();
-const escueladenengocios=new LearningPaht();
+const escuelaWeb=new LearningPath({
+    name:"escuela de desarrrollo web",
+    courses:["curso css","curso html","curso responsive design"],
+});
+const escueladenengocios=new LearningPath({
+    name:"escuela de negocios",
+    courses:["curso de negocios","curso finanzas","curso de dinero digital"],
+});
 
 
 const juan2= new Student({
