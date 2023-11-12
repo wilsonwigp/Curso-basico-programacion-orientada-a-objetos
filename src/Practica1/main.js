@@ -44,3 +44,50 @@ const juanita=new Student(
     15,
     ["Curso de introduccion a los videojuegos","curso de creacion de personajes"]
 )
+
+//Prototipos con la sintaxis de las clases,instancia de clase
+
+class Student2{
+    constructor(name,age,CursosAprobados){
+        this.name=name;
+        this.age=age;
+        this.CursosAprobados=CursosAprobados;
+    }
+    aprobarCurso(nuevocursito){
+        this.CursosAprobados.push(nuevocursito);
+    }
+}
+
+const Miguielito=new Student2(
+    "Miguel",
+    28,
+    [
+        "Curso de negocios",
+        "principios de visualizacion de datos para BI"
+    ]
+);
+
+
+//Se puede recibir un solo parametro de tipo objeto ayudandonos a pasar los parametros en desorden.
+class Student3{
+    constructor({name,age,twiter,instagram,CursosAprobados=[],email,facebook}){
+        this.name=name;
+        this.age=age;
+        this.twiter=twiter;
+        this.instagram=instagram;
+        this.CursosAprobados=CursosAprobados;
+        this.email=email;
+        this.facebook=facebook;
+    }
+    aprobarCurso(nuevocursito){
+        this.CursosAprobados.push(nuevocursito);
+    }
+}
+
+const Miguelito=new Student3({
+    email:"miguelito@platzi.com",
+    name:"Miguel",
+    age:28,
+}
+
+);
