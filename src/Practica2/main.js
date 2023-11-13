@@ -88,7 +88,7 @@ class Student{
     }
 }
 
-class LearningPath{
+class LearningPath{ 
     constructor({
         name,courses=[]
     }){
@@ -98,11 +98,21 @@ class LearningPath{
 
 }
 
+class Course{
+    constructor({
+        name,classes=[]
+    }){
+        this.name=name;
+        this.classes=classes;
+    }
+}
+
 
 const escuelaWeb=new LearningPath({
     name:"escuela de desarrrollo web",
     courses:["curso css","curso html","curso responsive design"],
 });
+
 const escueladenengocios=new LearningPath({
     name:"escuela de negocios",
     courses:["curso de negocios","curso finanzas","curso de dinero digital"],
@@ -114,6 +124,10 @@ const juan2= new Student({
     username:"juandc",
     email:"juandc@gamil.com",
     twitter:"fjuandc",
+    learningPaths:[
+        escuelaWeb,
+        escueladenengocios
+    ]
 })
 
 const miguelito2=new Student({
