@@ -102,20 +102,57 @@ class Course{
     constructor({
         name,classes=[]
     }){
-        this.name=name;
+        this._name=name;
         this.classes=classes;
     }
+    get name(){
+        return this._name
+    }
+    changeName(Nuevonombrecito){
+        this._name=Nuevonombrecito
+    }
+    set name(Nuevonombrecito){
+        if(Nuevonombrecito==="curso malito de prog basica"){
+            console.error("wey ... no")
+        }
+        else{
+            this._name=Nuevonombrecito;
+        }
+
+    }
 }
+cursoProgrBasica.name=" "
+//devuelve el nombre
+cursoProgrBasica.changeName("lalala")
+
+cursoProgrBasica.name="lalala"
+
+const cursoProgrBasica=new Course({
+    name:"Curso gratis de programacion basica",
+})
+const cursodefinitohtml=new Course({
+    name:"Curso definitio de html",
+}
+)
+const cursodenegocios=new Course({
+    name:"Curso de negocios",
+}
+)
+const cursodefinanzas=new Course({
+    name:"Curso de finanzas",
+}
+)
+
 
 
 const escuelaWeb=new LearningPath({
     name:"escuela de desarrrollo web",
-    courses:["curso css","curso html","curso responsive design"],
+    courses:[cursodefinitohtml,cursoProgrBasica],
 });
 
 const escueladenengocios=new LearningPath({
     name:"escuela de negocios",
-    courses:["curso de negocios","curso finanzas","curso de dinero digital"],
+    courses:[cursodenegocios,cursodefinanzas],
 });
 
 
