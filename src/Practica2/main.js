@@ -121,11 +121,8 @@ class Course{
 
     }
 }
-cursoProgrBasica.name=" "
-//devuelve el nombre
-cursoProgrBasica.changeName("lalala")
 
-cursoProgrBasica.name="lalala"
+
 
 const cursoProgrBasica=new Course({
     name:"Curso gratis de programacion basica",
