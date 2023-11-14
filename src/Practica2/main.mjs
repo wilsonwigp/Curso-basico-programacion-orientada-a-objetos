@@ -122,6 +122,31 @@ class Course{
     }
 }
 
+function videoPlay(id){
+    const urlsecreta="https://platziultrasecreto.com"+id;
+    console.log("se esta reproduciendo desde la url"+urlsecreta)
+
+}
+function videoStoop(id){
+    const urlsecreta="https://platziultrasecreto.com"+id;
+    console.log("se pausó desde "+urlsecreta)
+}
+//los export nos permite ejecutar codigo desde otro lado
+export class Platziclass{
+    constructor({
+        name,videoID,
+    }){
+        this.name=name;
+        this.videoID=videoID;
+    }
+    reproducir(){
+        videoPlay(this.videoID);
+    }
+    pausar(){
+        videoStoop(this.videoID);
+    }
+
+}
 
 
 const cursoProgrBasica=new Course({
